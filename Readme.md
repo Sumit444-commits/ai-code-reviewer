@@ -29,7 +29,7 @@ In 2026, "Vibe Coding" and AI-assisted development are the standards. This proje
 
 ### 1. Prerequisites
 * Node.js (v18+)
-* A Gemini API Key from [Google AI Studio](https://aistudio.google.com/)
+* A Gemini API Key from [Google AI Studio](https://ai.google.dev/)/
 
 ### 2. Backend Setup
 ```bash
