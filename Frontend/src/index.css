@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@theme {
+  /* 1. Define Design Tokens */
+  --font-sans: "Inter", system-ui, "Avenir", "Helvetica", "Arial", sans-serif;
+  
+  
+  --color-brand: #646cff;
+  --color-brand-hover: #535bf2;
+  --color-brand-light: #747bff;
+  
+  --color-text-main: light-dark(#213547,rgba(255, 255, 255, 0.87));
+  --color-bg-main: light-dark(#242424,#ffffff);
+  --color-bg-button: light-dark(#f9f9f9,#1a1a1a);
+}
+
+@layer base {
+  :root {
+    /* 2. Global Typography & Performance */
+    font-family: var(--font-sans);
+    line-height: 1.5;
+    font-weight: 400;
+    
+    color: var(--color-text-main);
+    background-color: var(--color-bg-main);
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html,
+  body,
+  #root{
+    @apply w-full h-full;
+  }
+ 
+  body {
+    margin: 0;
+    @apply flex items-center min-w-[320px] min-h-screen;
+  }
+
+  h1 {
+    @apply text-[3.2em] leading-[1.1];
+  }
+
+  /* 3. Global Element Styling with Variants */
+  a {
+    @apply font-medium text-brand no-underline transition-colors duration-200;
+    
+    &:hover {
+      color: light-dark(var(--color-brand-light),var(--color-brand-hover));
+    }
+  }
+
+  button {
+    @apply rounded-lg border border-transparent px-5 py-2 text-base font-medium 
+           cursor-pointer transition-[border-color] duration-200;
+    
+    /* Using the theme variable that handles light/dark automatically */
+    background-color: var(--color-bg-button);
+    font-family: inherit;
+
+    &:hover {
+      border-color: var(--color-brand);
+    }
+
+   &:focus, &:focus-visible {
+    /* Use raw CSS properties instead of @apply */
+    outline: auto 4px -webkit-focus-ring-color;
+  }
+  }
+}
