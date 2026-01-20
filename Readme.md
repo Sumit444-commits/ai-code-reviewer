@@ -37,7 +37,9 @@ cd Backend
 npm install
 # Create a .env in backend/ file
 # GOOGLE_GEMINI_KEY=your_key_here
-npm run dev
+# PORT=5000
+
+npm start
 
 ```
 
@@ -57,12 +59,11 @@ npm run dev
 ---
 
 ## 🌐 Live Demo  
-🔗 **Project Demo:** https://your-demo.vercel.app  
+🔗 **Project Demo:** https://ai-code-reviewer-tau-jet.vercel.app/  
 
 ## 🔗 Repository  
 💻 **GitHub:** https://github.com/Sumit444-commits/ai-code-reviewer  
 
 ---
-[](https://github.com/Sumit444-commits/ai-code-reviewer)
 
 Developed with ❤️ by **Sumit Sharma**
